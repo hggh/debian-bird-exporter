@@ -1,0 +1,9 @@
+[Unit]
+Description=Bird Prometheus Exporter
+
+[Service]
+EnvironmentFile=/etc/default/bird_exporter
+ExecStart=/usr/bin/bird_exporter $OPTIONS
+
+[Install]
+WantedBy=multi-user.target
